@@ -8,7 +8,6 @@ obj_db = DBHandler()
 
 @app.get('/')
 async def home():
-    print(obj_model_veh_clfxn.getTunedModel())
     return {"AVL": "This is the home page."}
 
 @app.get('/classify')
@@ -30,3 +29,5 @@ async def getVehicleIno(pseudo_vin: int):
     veh_info = obj_db.getVehicleInfo(pseudo_vin)
     
     return veh_info
+
+

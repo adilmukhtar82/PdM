@@ -18,13 +18,13 @@ class DBHandler:
         return json_data
     
     def insertClassifications(self, vehicle_info):
-        #try:
-        json_vehicle_info = vehicle_info.to_dict('records')
-        print(json_vehicle_info)
-        self.classifications.insert(json_vehicle_info)
-        return 'working'
-            #return "Success."
-        #except Exception as e:
-            #return "Unsuccessful"
+        try:
+            json_vehicle_info = vehicle_info.to_dict('records')
+            
+            self.classifications.insert(json_vehicle_info)
+ 
+            return "Success."
+        except Exception as e:
+            return "Unsuccessful"
 
        

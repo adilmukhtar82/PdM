@@ -1,15 +1,15 @@
 import pickle
 import pandas as pd
-import random
+
 
 class ModelVehicleDamageClassification:
 
     # load models for classification in the constructor
     def __init__(self):
-        self.scaler_model = self.loadModels('../models/scaler.sav')
-        self.tuned_model = self.loadModels('../models/tuned_rf_model.sav')
-        self.log_model = self.loadModels('../models/log_model.sav')
-        self.df_test_data = self.loadTestData('../data/test_logged_transformed_data.csv')
+        self.scaler_model = self.loadModels('./models/scaler.sav')
+        self.tuned_model = self.loadModels('./models/tuned_rf_model.sav')
+        self.log_model = self.loadModels('./models/log_model.sav')
+        self.df_test_data = self.loadTestData('./data/test_logged_transformed_data.csv')
 
     # load specific model
     def loadModels(self,path):
@@ -23,7 +23,6 @@ class ModelVehicleDamageClassification:
         try:
             df_test = pd.read_csv(path, index_col=False)
             df_test = df_test.loc[:, ~df_test.columns.str.contains('^Unnamed')]
-
             return df_test
         
         except Exception as e:

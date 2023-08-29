@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from model_handler import ModelVehicleDamageClassification
-from db_handler import DBHandler
+from .model_handler import ModelVehicleDamageClassification
+from .db_handler import DBHandler
 
 app = FastAPI()
 obj_model_veh_clfxn = ModelVehicleDamageClassification()

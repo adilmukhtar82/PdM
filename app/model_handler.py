@@ -21,8 +21,9 @@ class ModelVehicleDamageClassification:
     # load test data for predicitons
     def loadTestData(self, path):
         try:
-            df_test = pd.read_csv(path)
+            df_test = pd.read_csv(path, index_col=False)
             df_test = df_test.loc[:, ~df_test.columns.str.contains('^Unnamed')]
+
             return df_test
         
         except Exception as e:

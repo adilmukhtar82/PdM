@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from model_handler import ModelVehicleDamageClassification
-import random
 
+import json
 app = FastAPI()
 obj_model_veh_clfxn = ModelVehicleDamageClassification()
 
@@ -20,5 +20,6 @@ async def classify():
     classification = obj_model_veh_clfxn.classify(X_preprocessed)
     print(classification)
     #print(classification)
-    return {"damage": 0}
+    return {"predicted": classification, 
+            "true": y.item()}
 

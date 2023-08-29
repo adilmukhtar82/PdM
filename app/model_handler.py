@@ -32,7 +32,7 @@ class ModelVehicleDamageClassification:
         return self.getScalerModel().transform(X)
 
     def classify(self, X):
-       return self.getTunedModel().predict(X)[0]
+       return self.getTunedModel().predict(X)[0].item()
        
     
     # randomly select vehicle data from test data for prediction

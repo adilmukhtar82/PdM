@@ -33,3 +33,6 @@ The repository contains the following folders and files at [./] path:
 * [requirements.txt](https://github.com/adilmukhtar82/PdM/blob/main/requirements.txt)
     
     This file contains relevant packages to create new environment for this project. 
+
+
+![architecture](https://github.com/adilmukhtar82/PdM/blob/main/architecture.png)

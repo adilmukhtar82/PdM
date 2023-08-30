@@ -12,7 +12,7 @@ The repository contains the following folders and files at [./](https://github.c
 
 * [docs/](https://github.com/adilmukhtar82/PdM/tree/main/docs):
 
-    This folder contains files that provides information related to the problem statement.
+    This folder contains files that provides information related to the problem statement and solution.
 
 * [models/](https://github.com/adilmukhtar82/PdM/tree/main/models):
 
